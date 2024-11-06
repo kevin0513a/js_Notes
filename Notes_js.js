@@ -135,9 +135,3 @@ console.log(redondeo)
 b = 8.3
 let truncado = Math.trunc(b)
 console.log(truncado)
-
-
-
-
-
-

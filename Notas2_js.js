@@ -115,3 +115,27 @@ persona2 = {
 
 console.log(persona1.nombreCompleto("Programdor", "23423423"));
 console.log(persona1.nombreCompleto.call(persona2, "Ing", '123233232'));
+
+//CLASES CON JS -->
+
+class Personas {
+    constructor(nombre, apellido){
+        this._nombre = nombre;
+        this._apellido = apellido;
+    }
+    //Get usamos para obtener valores, en este caso el Nombre -->
+    get nombre(){
+        return this._nombre;
+    }
+    //Set usamos para modificar valores, en este caso el Nombre -->
+    set nombre(nombre){
+        this._nombre = nombre;
+    }
+}
+
+let personas1 = new Personas("Kevin", "Arboleda");
+console.log(personas1.nombre);
+let personas2 = new Personas("Shirly", "Pantoja");
+console.log(personas2);
+personas1.nombre = "Groot"
+console.log(personas1)
