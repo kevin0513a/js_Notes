@@ -8,18 +8,20 @@ let persona = {
         return titulo + " " + this.name + " " + this.lastName + " " + tel;
     }
 }
+
+//Funciones dentro de un objeto -->
 console.log(persona.age)
 console.log(persona.lastName)
-console.log(persona.nombreCompleto())
+console.log(persona.nombreCompleto());
 
-
+//Otra forma de crear un objeto en Js
 let persona2 = new Object();
 persona2.name = "Groot";
 persona2.lastname = "Best";
 persona2.hero = "tree";
 
-console.log(persona2.hero)
-console.log(persona2["name"])
+console.log(persona2.hero);
+console.log(persona2["name"]);
 
 //For in -->
 for(namePropiedad in persona2){
@@ -37,16 +39,21 @@ console.log(persona2)
 //Concatenar cada valor de cada propiedad -->
 console.log(persona2.name + " " + persona2.lastname)
 
+//For in para ver las propiedades del Objeto -->
 for(propiedad in persona2){
     console.log(persona2[propiedad])
 }
 
+// Otra manera de ver los objetos como array -->
 let persona2Array = Object.values(persona2)
-console.log(persona2Array)
+console.log(persona2Array);
 
+//Como Json -->
 let persona2String = JSON.stringify(persona)
-console.log(persona2String)
+console.log(persona2String);
 
+
+//Uso del Get y Set en JS -->
 let animal = {
     nombre: "Tony",
     raza: "Pincher",
@@ -69,7 +76,7 @@ console.log(animal.lenguaje)
 console.log(animal.idioma)
 
 
-
+//Metodo constructor en js -->
 function Persona(nombre, apellido, edad, email){
     this.nombre = nombre;
     this.apellido = apellido;
@@ -92,9 +99,6 @@ console.log(padre)
 padre.tel = 12121212
 Persona.prototype.tel = '234234'
 console.log(madre)
-
-
-
 
 persona1 = {
     nombre: "Kevin",
