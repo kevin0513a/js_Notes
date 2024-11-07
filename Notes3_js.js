@@ -78,16 +78,4 @@ console.log(Persona.contadorObjetosPersona);
 console.log(Programador.contadorObjetosPersona);
 console.log(programador1.contadorObjetosPersona);
 
-//Reto de arrays y diccionarios by Midudev Done:checkd -->
-
-let array = [1 ,4, 6, 2, 4];
-let n = 10;
-
-for(let i = 0; i < array.length; i++){
-    if(array[i]+array[i+1] == n){
-        console.log(`El resultado de ${array[i]} + ${array[i+1]} es ${array[i] + array[i+1]}`);
-        console.log(`Con posiciones ${[i]} y ${[i + 1]}`);
-    }
-}
-
 
