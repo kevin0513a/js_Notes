@@ -1,9 +1,15 @@
 //Clases y Herencia en JavaScript, sobreescritura -->
 class Persona {
+
+    //Atributos estáticos para hallar la cantidad de objetos en una clase -->
+    static contadorObjetosPersona = 0; 
+
     constructor(name, lastname, age) {
         this._name = name;
         this._lastname = lastname;
         this._age = age;
+        Persona.contadorObjetosPersona++;
+        console.log('se incrementa contador ' + Persona.contadorObjetosPersona)
     }
 
     get name() {
@@ -27,6 +33,15 @@ class Persona {
     nombreCompleto(){
         return this._name + " " + this.lastname;
     }
+
+    //Funciones static -->
+
+    static saludar(){
+        console.log("Saludos desde static")
+    }
+    static saludar2(persona){
+        console.log(persona.name);
+    }
 }
 
 class Programador extends Persona {
@@ -45,6 +60,7 @@ class Programador extends Persona {
     nombreCompleto(){
         return super.nombreCompleto() + " y programo en " + this._languaje;
     }
+    
 }
 
 let persona1 = new Persona("Kevin", "Arboleda", 18);
@@ -53,3 +69,25 @@ let programador1 = new Programador("Kevin", "Arboleda", 18, "JavaScript");
 console.log(programador1)
 //Aquí error a corregir -->
 console.log(programador1.nombreCompleto());
+Persona.saludar();
+Persona.saludar2(persona1);
+Programador.saludar2(programador1);
+
+
+console.log(Persona.contadorObjetosPersona);
+console.log(Programador.contadorObjetosPersona);
+console.log(programador1.contadorObjetosPersona);
+
+//Reto de arrays y diccionarios by Midudev Done:checkd -->
+
+let array = [1 ,4, 6, 2, 4];
+let n = 10;
+
+for(let i = 0; i < array.length; i++){
+    if(array[i]+array[i+1] == n){
+        console.log(`El resultado de ${array[i]} + ${array[i+1]} es ${array[i] + array[i+1]}`);
+        console.log(`Con posiciones ${[i]} y ${[i + 1]}`);
+    }
+}
+
+
