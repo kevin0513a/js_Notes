@@ -78,4 +78,75 @@ console.log(Persona.contadorObjetosPersona);
 console.log(Programador.contadorObjetosPersona);
 console.log(programador1.contadorObjetosPersona);
 
+//Funciones tipo flecha (arrow) -->
 
+//Función normal -->
+function suma (a,b){
+    console.log(a + b)
+}
+suma(5,6)
+
+
+//Funcion flecha, cabe recalcar que aplica hosting para esta funcion -->
+let resta = (a,b) => {
+    console.log(a+b)
+}
+resta(3,2);
+
+const saludar = () => "Saludos desde funcion flecha";
+console.log(saludar());
+
+
+const salidaDeParametros = (mensaje) => (mensaje)
+console.log(salidaDeParametros("Grande maquina"));
+
+//Funciones callBack -->
+//Aquí un ejemplo de funciones normales y término de hosting -->
+
+imprimir2();
+imprimir1();
+
+function imprimir1 () {
+    console.log("Primera impresión")
+}
+
+function imprimir2 () {
+    console.log("Segunda impresión")
+}
+
+
+//Ahora funciones callBack
+
+function imprimir(mensaje){
+    console.log(mensaje);
+}
+//Error de extensión quoka -->
+try{
+    function suma(a, b, funcionCallBack){
+        let resultado = a + b;
+        funcionCallBack(`Resultado: ${resultado}`);
+    }
+}
+catch(error){
+    console.log(error.name)
+}
+
+suma(1,3,imprimir);
+
+//Funciones con setTimeout despues de 3 segundos(Llamadas asíncronas) -->
+
+function miFuncionCallBack(){
+    console.log('Saludo asincrono despues de 3 segundos')
+}
+
+setTimeout(miFuncionCallBack, 3000)
+setTimeout(function(){console.log('Mensaje asíncrono 2 desde consola')}, 4000)
+setTimeout(() => console.log(";Mensaje asíncrono 3..."), 5000)
+
+//Funcion setInterval -->
+let reloj = () => {
+    let fecha = new Date();
+    console.log(`${fecha.getHours()}:${fecha.getMinutes()}:${fecha.getSeconds()}`)
+}
+
+// setInterval(reloj, 1000);
