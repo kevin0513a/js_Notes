@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo DOM con JavaScript</title>
+</head>
+<body>
+    <h1 id="cabecero">Hello World</h1>
+    <p id="parrafo">Saludos de KevinBest</p>
+    <p id="parrafo2">Este es el segundo párrafo</p>
+    <p id="nParrafostoShow"></p>
+    <p>Otro párrafo...</p>
+    
+    <script>
+        //Obtener la información de los elementos con getElementById -->
+        let cabecero = document.getElementById('cabecero').innerHTML;
+        let parrafo = document.getElementById('parrafo');
+        let parrafos = document.getElementsByTagName('p');
+
+
+        console.log(`Número de párrafos: ${parrafos.length}`)
+        console.log(`Valor del cabecero: ${cabecero}`);
+        console.log(`Valor del párrafo: ${parrafo.innerHTML}`);
+        console.log('Saludos desde JavaScript');
+
+        document.getElementById('nParrafostoShow').innerHTML = `Número de párrafos: ${parrafos.length}`
+
+        for(let i = 0; i < parrafos.length; i++){
+            console.log(`Párrafo #${i + 1}: ${parrafos[i].innerHTML}`)
+        }
+        
+        //Podemos modificar desde JS -->
+        // parrafo.innerHTML = "Grande maquina"
+    </script>
+    
+</body>
+</html>
