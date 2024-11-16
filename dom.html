@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo DOM con JavaScript</title>
+</head>
+<body> 
+    <h1 id="titulo">Manejo de DOM JS</h1>
+    <button onclick="mostrar()">Botón</button>
+    <br/>
+    <img alt="imagen" id="imagen" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiwWvtD4vKugsv3cM_uzaF_TY1DYfjZVgbRA&s" />
+    <br/>
+    <script>
+        //Tener cuidado porque sobreescribe todo el documento
+        document.write('Saludos desde JavaScript')
+        
+        function mostrar(){
+            document.getElementById('titulo').innerHTML = "<br/>Nuevo título";x
+            document.getElementById('imagen').src = 'https://www.diariodelsur.com.co/wp-content/uploads/2024/09/Westcol_0.jpg'
+            document.getElementById('titulo').style.color = 'blue'
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="entrar()">
+    <h1 onclick="cambiarTexto(this)">Tilulo</h1>
+    Nombre<input type="text" onchange="convertir(this)" />
+
+    <h1 id="title" onmousedown="verde(this)" onmouseup="gris(this)" onmouseover="rojo(this)" onmouseout="azul(this)">
+        Título para mostrar texto en un nuevo div</h1>
+
+    <div id="mostrar"></div>
+
+
+    <h1>Calculadora en Js --></h1>
+    <input id="number1" type="number" placeholder="Número 1" />
+    <input id="number2" type="number" placeholder="Número 2" />
+
+    <button onclick="mostrarSuma()">+</button>
+
+
+    <button>-</button>
+    <button>/</button>
+    <button>*</button>
+    <br />
+    <div id="resultado"></div>
+    <div id="cookies"></div>
+
+    <br />
+    Apellido<input type="text" onblur="cambiarColor2(this)" onfocus="cambiarColor(this)" />
+    Edad<input type="number" id="edad"" />
+    <br/>
+    Password<input type=" password" id="email" onblur="cambiarColor2(this)" onfocus="cambiarColor(this)" />
+
+
+
+    <script>
+
+        document.getElementById('edad').addEventListener('focus', cambiar)
+        document.getElementById('edad').addEventListener('blur', regresar)
+
+        function cambiar(evento) {
+            let componente = evento.target;
+            componente.style.background = 'red'
+        }
+        function regresar(evento) {
+            let componente = evento.target;
+            componente.style.background = 'white'
+        }
+
+        function cambiarColor(elementoInput) {
+            elementoInput.style.background = 'yellow'
+        }
+        function cambiarColor2(elementoInput) {
+            elementoInput.style.background = 'white';
+        }
+
+        function convertir(nombreInput) {
+            nombreInput.value = nombreInput.value.toUpperCase();
+        }
+
+        function rojo(titulo) {
+            titulo.style.color = 'red';
+        }
+
+        function azul(titulo) {
+            titulo.style.color = 'blue';
+        }
+        function verde(titulo) {
+            titulo.style.color = 'green';
+        }
+
+        function gris(titulo) {
+            titulo.style.color = 'gray';
+        }
+
+        function entrar() {
+            alert('Entrando al sitio web')
+            let text = '';
+            if (navigator.cookieEnabled) {
+                text = 'Cookies habilitadas'
+            } else text = 'Cookies desabilitadas'
+
+            document.getElementById('cookies').innerHTML = text;
+        }
+        function mostrarSuma() {
+            console.log("+")
+            let n1suma = parseFloat(getElementById('number1').value);
+            let n2suma = parseFloat(getElementById('number2').value);
+            let suma;
+            suma = n1suma + n2suma;
+            console.log(suma)
+        }
+
+
+
+
+
+
+
+
+
+
+        function cambiarTexto(titulo) {
+            titulo.innerHTML = "Cambiamos de titulo"
+        }
+        document.getElementById('title').onclick = cambiarADiv;
+
+        function cambiarADiv() {
+            document.getElementById('mostrar').innerHTML = "Nuevo div máquina";
+        }
+    </script>
+</body>
+
+</html>
