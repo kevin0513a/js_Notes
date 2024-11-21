@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+}
+
+body{
+    background-color: #707996;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container-calculator{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #828ba9;
+    padding: 100px;
+    border-radius: 40px;
+}
+
+.titulo-calculadora{
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    color: white;
+}
+
+.input-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    box-sizing: border-box;
+    gap: 50px;
+}
+
+.input-style{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.input-style label{
+    color: white;
+    font-weight: bold;
+}
+
+.input-style input{
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+}
+
+.input-style input::placeholder{
+    text-align: center;
+}
+
+.container-buttons-operations{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.button-opearations-style{
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: rgb(224, 224, 224);
+}
+
+.button-opearations-style:hover{
+    background-color: #363b49;
+    color: white;
+    transition: .3s all ease-in-out;
+}
+
+.button-delete-style{
+    border: none;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+
+.button-delete-style:hover{
+    background-color: rgb(99, 24, 24);
+    color: white;
+    transition: .3s all ease-in-out;
+    font-weight: bold;
+}
+
+.resultado-style{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 50px;
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+
