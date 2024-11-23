@@ -106,3 +106,24 @@ body{
     border-radius: 5px;
 }
 
+.hora-style{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 30px;
+    margin-bottom: 15px;
+    color: rgb(216, 235, 243);
+}
+
+.dia-style{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    color: rgb(216, 235, 243);
+}
+
+
+
+

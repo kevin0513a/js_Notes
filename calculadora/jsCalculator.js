@@ -27,6 +27,7 @@ function realizarOperacion(operacion) {
             resultado = num1 / num2;
             break;
     }
+
     console.log(resultado);
     document.getElementById('resultado').innerHTML = resultado;
 }
@@ -36,4 +37,26 @@ function borrar() {
     document.getElementById('resultado').innerHTML = 'Datos borrados';
     setTimeout(() => document.getElementById('resultado').innerHTML = '', 2000)
 }
+
+let reloj = () => {
+    let fecha = new Date();
+    let horas = fecha.getHours();
+    let minutos = fecha.getMinutes();
+    let segundos = fecha.getSeconds();
+    let dia = fecha.getDate();
+    let mes = fecha.getMonth();
+    let año = fecha.getFullYear();
+
+    horas = horas < 10 ? '0' + horas : horas;
+    minutos = minutos < 10 ? '0' + minutos : minutos;
+    segundos = segundos < 10 ? '0' + segundos : segundos;
+
+
+    let mostrarHora = (`Hora: ${horas}:${minutos}:${segundos}`);
+    let mostrarDia = (`${dia}/${mes + 1}/${año}`);
+    document.getElementById('hora').innerHTML = mostrarHora;
+    document.getElementById('dia').innerHTML = mostrarDia;
+}
+
+setInterval(reloj, 1000);
   
